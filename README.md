@@ -26,10 +26,26 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-
+👉 Netlify:
 https://admindashboard-product-angular.netlify.app/
 
+👉 Images:
+Dashboard
+![Admindashboardproduct-dashboard-angular](https://github.com/Rohini-pr/admindashboard-product/assets/125246758/f9187037-cfad-4b04-9c32-29314774a6e5)
 
-![image](https://github.com/Rohini-pr/admindashboard-product/assets/125246758/a6c2514e-3eb0-4923-922b-332b13805b16)
+👉 Customers
+![customers](https://github.com/Rohini-pr/admindashboard-product/assets/125246758/4ebe6fd5-f35e-4e50-bf95-0b5d684c9f21)
+
+👉 Category
+![category](https://github.com/Rohini-pr/admindashboard-product/assets/125246758/1a3a4e2a-a02c-4c0f-a03c-3bd8d5380fd7)
+
+👉 Products
+![products](https://github.com/Rohini-pr/admindashboard-product/assets/125246758/cd08fbda-e88d-4e38-981d-e5242a14e872)
+
+👉 Orders
+![orders](https://github.com/Rohini-pr/admindashboard-product/assets/125246758/a940efb0-1ed7-4218-884a-5ee53903ca14)
+
+👉 Contacts
+![contacts](https://github.com/Rohini-pr/admindashboard-product/assets/125246758/63f745f4-74fc-4bd5-8d9c-5091fd5e01cc)
 
 
