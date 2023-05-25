@@ -30,8 +30,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 https://admindashboard-product-angular.netlify.app/
 
 👉 Images:
-Dashboard
+👉 Dashboard
 ![Admindashboardproduct-dashboard-angular](https://github.com/Rohini-pr/admindashboard-product/assets/125246758/f9187037-cfad-4b04-9c32-29314774a6e5)
+![view-sales](https://github.com/Rohini-pr/admindashboard-product/assets/125246758/9013547f-376b-4e84-9c68-f2be4269f7d2)
+![visitors-profile](https://github.com/Rohini-pr/admindashboard-product/assets/125246758/a3bf54cd-1564-4f29-a0fb-ee554ad69720)
 
 👉 Customers
 ![customers](https://github.com/Rohini-pr/admindashboard-product/assets/125246758/4ebe6fd5-f35e-4e50-bf95-0b5d684c9f21)
