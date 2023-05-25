@@ -1,0 +1,172 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=EB+Garamond&family=Libre+Baskerville&family=Poppins:wght@100;200;300;400;500;600&family=Solway:wght@300;400&display=swap');
+
+/* Top Cards starts*/
+.cards{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 10px;
+    flex-wrap: wrap;
+}
+
+.card{
+    border-radius: 15px;
+    height: 85px;
+    background-color: rgb(77, 48, 139);
+    color: white;
+    align-content: center;
+}
+
+.card:hover{
+  background-color: rgb(83, 35, 185);
+  color: rgb(235, 233, 233);
+}
+/* Top Cards ends*/
+
+
+/* Area Chart  Starts*/
+.chart{
+    margin: 35px 10px;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+/* Area Chart  ends*/
+
+
+/* Donut & Line chart Starts */
+.bardonut{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-direction: row;  
+    margin-bottom: 25px;
+}
+
+/* Line chart */
+.linechart{
+    width: 56%;
+    border-radius: 5px;
+}
+
+/* Donut */
+.donut{
+    width: 39%;
+    border-radius: 5px;
+}
+/* Donut & Line chart ends */
+
+/* Card & Calender & Table  starts*/
+.calenderToggle{
+    margin-left:20px;
+    margin-right:20px;
+    margin-bottom: 10px;  
+}
+
+#cardCalender{
+  width: 100%; 
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-evenly; 
+  background-color: white; 
+  border-radius: 10px; 
+  box-shadow: 5px 5px 5px 5px #420869; 
+}
+
+/* Bottom Cards starts */
+mat-card-title{
+  font-family: "Poppins", sans-serif;
+  font-size:15px;
+  color: rgb(4, 92, 11);
+  font-weight: 700;
+}
+
+mat-card-subtitle{
+  font-family: "Poppins", sans-serif;
+}
+
+mat-card-content{
+  font-family: "Poppins", sans-serif;
+  font-size:12px;
+}
+
+/* Table starts */
+table {
+  width: 40%;
+  border-radius: 5px; 
+  overflow: auto;  
+}
+
+table td {
+  height: 5px;
+  line-height: 7px;
+  color: rgb(44, 8, 8);
+}
+
+ng-container {
+  align-items: center;
+  text-align: center;
+}
+
+/* calender starts */
+mat-calendar{
+  border-radius: 5px;
+}
+
+/* Card & Calender & Table  starts ends */
+
+/* -------------------------------------------------------- */
+
+/* For mobile phones: */
+@media only screen and (max-width: 786px) {
+  .card{
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .bardonut{
+    flex-direction: column;
+  }
+
+  .linechart{
+    width: 100%;
+  }
+
+  .donut{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .calenderToggle{
+    flex-direction: column;
+    gap: 1px;
+    align-items: center;
+  }
+  
+  #cardCalender{
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content:space-between;
+  }
+
+  .example-card{
+    margin-bottom: 10px;
+    width: 100%;
+    margin: 10px 1px;
+    flex-wrap: wrap;
+  }
+
+  table{
+    margin: 10px 0px;
+  }
+
+  mat-calendar{
+    width: 250px;
+    margin-left: 50PX;
+  }
+  .wrapper{
+    position: absolute;
+  }
+}

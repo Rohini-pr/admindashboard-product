@@ -1,0 +1,9 @@
+/* Google font link*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=EB+Garamond&family=Libre+Baskerville&family=Poltawski+Nowy&family=Poppins:wght@100;200;300;400;500;600&family=Solway:wght@300;400&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+mat-card{
+    padding: 20px 10px;
+}

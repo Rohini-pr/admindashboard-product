@@ -1,0 +1,26 @@
+/* Google font link*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=EB+Garamond&family=Libre+Baskerville&family=Poltawski+Nowy&family=Poppins:wght@100;200;300;400;500;600&family=Solway:wght@300;400&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+mat-progress-spinner{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+h2{
+    color: rgb(235, 235, 15);
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+h4{
+    font-family: 'Poltawski Nowy', serif;
+    color: white;
+    font-weight: bold;
+}
+button mat-raised-button{
+    color: white;
+}

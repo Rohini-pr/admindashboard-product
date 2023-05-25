@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Poppins:wght@100;200;300;400;500;600;700&family=Rubik+Moonrocks&family=Slabo+27px&family=Solway:wght@300;400&display=swap');
+.flex-container{
+    width: 100%;
+}
+.flex-container ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+mat-toolbar{
+    background-color: rgb(77, 48, 139);
+    color: white;
+    border-bottom: 1px solid rgb(26, 5, 77);
+    font-family: 'Instrument Serif', serif;
+
+}

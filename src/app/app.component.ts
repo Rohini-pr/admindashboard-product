@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Admin-Dashboard-Plant';
+
+  sidebarOpened:boolean=true
+
+  toggle(){
+    this.sidebarOpened = !this.sidebarOpened
+  }
 }

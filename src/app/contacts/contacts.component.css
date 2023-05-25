@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+.cardOne{
+    margin:2%;
+    width: 50%;
+    align-items: center;
+}
+mat-form-field{
+    /* margin: 3px 3px; */
+    width: 80%;
+}
+
+.matcard{
+  display: flex;
+  flex-direction: row;
+}
+.cardTwo{
+  margin:2%;
+    width: 50%;
+}
+
+
+
+
+/* -------------------------------------------------------- */
+
+/* For mobile phones: */
+@media only screen and (max-width: 786px){
+  .matcard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .cardOne{
+    margin:10px 0px;
+    width: 100%;
+  }
+  .cardTwo{
+    margin:10px 0px;
+    width: 100%;
+  }
+  .wrapper{
+    position: absolute;
+  }
+}

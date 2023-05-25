@@ -1,0 +1,39 @@
+.card{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 20;
+}
+.icon{
+    font-size: 25px;
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 20px;
+}
+.content span{
+    background-color: rgb(240, 234, 234);
+    padding: 1px 5px;
+    color: black;
+    border-radius: 10px;
+    font-weight: 500;
+}
+.content p{
+   font-size: 16px;
+}
+
+.orange{
+    background-color: rgb(238, 159, 24);
+}
+.blue{
+    background-color: rgb(78, 78, 231);
+}
+.red{
+    background-color: rgb(212, 39, 39);
+}
+.green{
+    background-color: rgb(44, 145, 44);
+}

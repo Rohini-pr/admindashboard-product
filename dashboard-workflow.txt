@@ -1,0 +1,214 @@
+        
+        
+        Dashboard-Angular Project Workflow
+        -------------------------------------
+        1. Create project : ng new Admin-Dashboard-Plant
+        2. run project : ng serve (in project folder)
+        3. Install / add 3rd  party libraries to complete project
+            -Install Angular material : ng add @angular/material
+                - choose a prebuild theme (custom)
+                - enable typography
+                - enable animation
+                    - To use any components from material 
+                        - copy the api for particular component and paste it in appModule.ts
+        4. delete all contents in AppComponent.html file
+        5. check 3rd party libraries working in project or not
+            - if not import prebuild theme to your project style.css file
+        6. generate components : ng g c component-name
+                - header
+                - footer
+                - sidebar
+                - dashboard
+                    -card
+                - customers
+                - category
+                - products
+                - orders
+                - contacts
+        7. Design components
+        8. Set up path for components
+            - dashboard 
+            - customers
+            - category
+            - products
+            - orders
+            - contacts
+        9. To add chart: use highcharts angular
+            - by using commmand: npm install highcharts-angular --save  //(https://github.com/highcharts/highcharts-angular/blob/master/README.md)
+            - Import HighchartsChartModule in AppModule
+            - Install highcharts using command: npm install highcharts --save
+            - Import highcharts in components where we will display chart  //(import * as Highcharts from 'highcharts';)
+            
+<div class="calenderToggle">
+
+    <mat-card id="cardCalender" style="display: flex; flex-direction: row; justify-content: space-between; width: 65%; background-color: white; border-radius: 10px; box-shadow: 5px 5px 5px 5px #420869; padding-left: 0px 10px; @media only screen and (max-width: 600px) {flex-direction:column;width:100%;justify-content:space-between;}">
+
+        <div style="display: flex; flex-direction: column; justify-content: space-between; padding: 15px 10px;">
+
+            <!-- ----------------------------- Cards with media area ------------------- -->
+    
+            <mat-card class="example-card" style="width:400px; box-shadow: 5px 5px 5px 5px #420869;">
+                <mat-card-header>
+                    <mat-card-title-group>
+                        <mat-card-title>Congratulations !!!🤩🤩</mat-card-title>
+                        <mat-card-subtitle>Best seller of the month</mat-card-subtitle>
+                        <mat-card-subtitle><button style="margin-top: 20px;" mat-raised-button color="primary">View Sales</button></mat-card-subtitle>
+                        <img style="height: 140px; width: 100px;" mat-card-sm-image src="https://static.vecteezy.com/system/resources/previews/016/766/342/original/happy-smiling-young-man-avatar-3d-portrait-of-a-man-cartoon-character-people-illustration-isolated-on-transparent-background-png.png" >
+                    </mat-card-title-group>
+                </mat-card-header>
+                <!-- <mat-card-content>
+                    {{longText}}
+                </mat-card-content> -->
+            </mat-card>
+            
+            <!-- ---------------------------- Progress-bar ----------------------------- -->
+    
+            <!-- Cards with media area -->
+            <mat-card class="example-card" style="width:400px; box-shadow: 5px 5px 5px 5px #420869;">
+                
+                <mat-card-content>
+                    <mat-card-title>Incremental Sales by Campaign</mat-card-title>
+                    <mat-card-subtitle>Email</mat-card-subtitle>
+                    <mat-progress-bar mode="determinate" value="70" color="primary"></mat-progress-bar>
+                    <mat-card-subtitle>Banner Ads</mat-card-subtitle>
+                    <mat-progress-bar mode="determinate" value="60" color="accent"></mat-progress-bar>
+                    <mat-card-subtitle>Social Ads</mat-card-subtitle>
+                    <mat-progress-bar mode="determinate" value="80" color="warn"></mat-progress-bar>
+                </mat-card-content>
+            </mat-card>
+            
+        </div>
+       
+    
+        <!-- --------------------------- Calendar ------------------------------ -->
+    
+        <div class="Calendar" style="width:250px; background-color: white; border-radius: 5px; padding: 5px 5px; margin: 15px 20px;">
+            <mat-calendar></mat-calendar> 
+        </div>
+    
+
+    </mat-card>
+    
+
+    
+    <!-- ----------------------------- Table ---------------------------- -->
+
+    <div class="box">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="imageUrl">
+              <th mat-header-cell *matHeaderCellDef><img style="border-radius: 3px; height: 25px; width: 25px;" src="https://www.fg-a.com/shopping-cart/shopping-cart-black-6.png" alt=""></th>
+              <td mat-cell *matCellDef="let element"><img style="border-radius: 30px; height: 30px; width: 30px;" [src]="element.imageUrl" alt="">  </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef><span style="font-weight: 800;">Resent Activity</span></th>
+                <td mat-cell *matCellDef="let element"><span style="font-weight: 500;">{{element.name}} </span> <br><br><br> 
+                <span style="color: rgb(126, 126, 126);">{{element.content}}</span></td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="time">
+                <th mat-header-cell *matHeaderCellDef><button mat-raised-button color="primary">See All</button></th>
+                <td mat-cell *matCellDef="let element"><span style="color: rgb(126, 126, 126);">{{element.time}} </span> 
+                </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>   
+    </div>
+    
+</div>
+-----------------------------------------------------------------------------------------------------
+<div class="calenderToggle">
+
+    <mat-card id="cardCalender" style="display: flex; flex-direction: row; justify-content: space-between; background-color: white; border-radius: 10px; box-shadow: 5px 5px 5px 5px #420869; @media only screen and (max-width: 600px) {flex-direction:column;width:100%;justify-content:space-between;}">
+
+        <div style="display: flex; flex-direction: column; justify-content: space-evenly; padding: 10px 10px;">
+
+            <!-- ----------------------------- Cards with media area ------------------- -->
+    
+            <mat-card class="example-card" style="box-shadow: 5px 5px 5px 5px #420869;">
+                <mat-card-header>
+                    <mat-card-title-group>
+                        <mat-card-title>Congratulations !!!🤩🤩</mat-card-title>
+                        <mat-card-subtitle>Best seller of the month</mat-card-subtitle>
+                        <mat-card-subtitle><button style="margin-top: 20px;" mat-raised-button color="primary">View Sales</button></mat-card-subtitle>
+                        <img style="height: 140px; width: 100px;" mat-card-sm-image src="https://static.vecteezy.com/system/resources/previews/016/766/342/original/happy-smiling-young-man-avatar-3d-portrait-of-a-man-cartoon-character-people-illustration-isolated-on-transparent-background-png.png" >
+                    </mat-card-title-group>
+                </mat-card-header>
+                <!-- <mat-card-content>
+                    {{longText}}
+                </mat-card-content> -->
+            </mat-card>
+            
+            <!-- ---------------------------- Progress-bar ----------------------------- -->
+    
+            <!-- Cards with media area -->
+            <mat-card class="example-card" style=" box-shadow: 5px 5px 5px 5px #420869;">
+                
+                <mat-card-content>
+                    <mat-card-title>Incremental Sales by Campaign</mat-card-title>
+                    <mat-card-subtitle>Email</mat-card-subtitle>
+                    <mat-progress-bar mode="determinate" value="70" color="primary"></mat-progress-bar>
+                    <mat-card-subtitle>Banner Ads</mat-card-subtitle>
+                    <mat-progress-bar mode="determinate" value="60" color="accent"></mat-progress-bar>
+                    <mat-card-subtitle>Social Ads</mat-card-subtitle>
+                    <mat-progress-bar mode="determinate" value="80" color="warn"></mat-progress-bar>
+                </mat-card-content>
+            </mat-card>
+            
+        </div>
+       
+    
+        <!-- --------------------------- Calendar ------------------------------ -->
+    
+        <div class="Calendar" style="width:230px; background-color: white; border-radius: 5px; padding: 5px 5px; margin: 15px 12px;">
+            <mat-calendar></mat-calendar> 
+        </div>
+    
+
+    </mat-card>
+
+
+    
+    <!-- ----------------------------- Table ---------------------------- -->
+
+    <div class="box">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+          
+            <!-- Position Column -->
+            <ng-container matColumnDef="imageUrl">
+              <th mat-header-cell *matHeaderCellDef><img style="border-radius: 3px; height: 25px; width: 25px;" src="https://www.fg-a.com/shopping-cart/shopping-cart-black-6.png" alt=""></th>
+              <td mat-cell *matCellDef="let element"><img style="border-radius: 30px; height: 30px; width: 30px;" [src]="element.imageUrl" alt="">  </td>
+            </ng-container>
+          
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef><span style="font-weight: 800;">Resent Activity</span></th>
+                <td mat-cell *matCellDef="let element"><span style="font-weight: 500;">{{element.name}} </span> <br><br><br> 
+                <span style="color: rgb(126, 126, 126);">{{element.content}}</span></td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="time">
+                <th mat-header-cell *matHeaderCellDef><button mat-raised-button color="primary">See All</button></th>
+                <td mat-cell *matCellDef="let element"><span style="color: rgb(126, 126, 126);">{{element.time}} </span> 
+                </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>   
+    </div>
+    
+</div>

@@ -1,0 +1,44 @@
+<mat-toolbar>
+    <button (click)="menubtnClicked()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span style="color: rgb(243, 243, 240);font-weight: bolder;">ADMIN DASHBOARD</span>
+    <span class="example-spacer"></span>
+    
+    <div class="flex-container">
+      <ul>
+        <li>
+            <!-- icon 1 -->
+            <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+              <mat-icon>settings</mat-icon>
+            </button>
+        </li>
+        <li>
+            <!-- icon 2 -->
+            <button [matMenuTriggerFor]="icon2" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+              <mat-icon matBadge="2" matBadgeColor="warn">notifications</mat-icon>
+            </button>
+            <!-- menu -->
+            <mat-menu #icon2="matMenu">
+              <button mat-menu-item>Messages <span style="color: rgb(241, 235, 235)
+              ;background-color: red;padding: 2px 2px;border-radius: 5px;">13</span></button>
+              <button mat-menu-item>Sales <span style="color: rgb(241, 235, 235)
+                ;background-color: red;padding: 2px 2px;border-radius: 5px;">20</span></button>
+            </mat-menu>
+        </li>
+        <li>
+            <!-- icon 3 -->
+            <button [matMenuTriggerFor]="menu" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+              <mat-icon>person_outline</mat-icon>
+            </button>
+            <!-- menu -->
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <mat-icon>logout</mat-icon> Log Out
+              </button>
+            </mat-menu>
+        </li>
+      </ul> 
+    </div>
+
+</mat-toolbar>

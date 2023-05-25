@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Instrument+Serif:ital@0;1&family=Poppins:wght@100;200;300;400;500;600;700&family=Rubik+Moonrocks&family=Slabo+27px&family=Solway:wght@300;400&display=swap');
+
+table {
+    width: 100%;
+    padding: 0px 20px;
+}
+#table{
+    width: 516px;   
+    margin-left: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(21, 13, 29);
+      font-family: 'Poppins', sans-serif;
+}
+
+th,td{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+h2{
+      color: rgb(213, 226, 27);
+      text-align: center;
+      padding-top: 10px;
+    font-family: 'Poppins', sans-serif;
+
+  }
+
+table th{
+      color: white;
+      background-color: rgb(44, 6, 80);
+  }
+td{
+      color: rgb(189, 189, 189);
+      background-color: rgb(61, 20, 99);
+  }
+mat-paginator{
+      background-color: rgb(44, 6, 80);
+      color: rgb(143, 140, 140);
+  }
+ 

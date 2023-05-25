@@ -1,0 +1,159 @@
+<div class="wrapper">
+    <!------------------- card ------------------------->
+<div class="cards">
+    <!-- card 1 -->
+    <mat-card class="card">
+        <app-card
+        bg="orange"
+        icon="account_balance_wallet"
+        description="Month Revenue"
+        count="₹15200"
+        ></app-card>
+    </mat-card>
+    <!-- card 2 -->
+    <mat-card class="card">
+        <app-card
+        bg="blue"
+        icon="paid"
+        description="Today Earning"
+        count="₹14000"
+        ></app-card>
+    </mat-card>
+    <!-- card 3 -->
+    <mat-card class="card">
+        <app-card
+        bg="red"
+        icon="shopping_cart"
+        description="Today Orders"
+        count="₹1000"
+        ></app-card>
+    </mat-card>
+    <!-- card 4 -->
+    <mat-card class="card">
+        <app-card
+        bg="green"
+        icon="sell"
+        description="Product Sold"
+        count="₹12000"
+        ></app-card>
+    </mat-card> 
+</div>
+
+<!-- ----------------------------- Area Chart ---------------------------- -->
+
+<div class="chart">
+    <!-- area-chart -->
+    <div>
+        <app-area-chart></app-area-chart>
+    </div>
+</div>
+
+<!-- ------------------------------ Donut & Line chart --------------------------- -->
+
+<div class="bardonut">
+
+    <!-- donut -->  
+    <div class="donut">
+        <app-donut></app-donut>
+    </div>
+
+    <!-- line-chart -->
+    <div class="linechart">
+        <app-line-chart></app-line-chart>
+    </div>  
+</div>
+
+<!-- ----------------------- Cards & Calender & Table ---------------------------------- -->
+
+<div class="calenderToggle">
+
+    <mat-card id="cardCalender">
+
+        <div style="display: flex; flex-direction: column; justify-content: space-evenly; padding: 10px 10px;">
+
+            <!-- ----------------------------- Cards with media area ------------------- -->
+    
+            <mat-card class="example-card" style="box-shadow: 5px 5px 5px 5px #420869;">
+                <mat-card-header>
+                    <mat-card-title-group>
+                        <mat-card-title>Congratulations !!!🤩🤩</mat-card-title>
+                        <mat-card-subtitle>Best seller of the month</mat-card-subtitle>
+                        <mat-card-subtitle><button style="margin-top: 20px;" mat-raised-button color="primary" (click)="openDialog()">View Sales</button></mat-card-subtitle>
+                        <img style="height: 140px; width: 100px;" mat-card-sm-image src="https://static.vecteezy.com/system/resources/previews/016/766/342/original/happy-smiling-young-man-avatar-3d-portrait-of-a-man-cartoon-character-people-illustration-isolated-on-transparent-background-png.png" >
+                    </mat-card-title-group>
+                </mat-card-header>
+            </mat-card>
+
+            
+
+            <!-- ---------------------------- Progress-bar ----------------------------- -->
+    
+            <!-- Cards with media area -->
+            <mat-card class="example-card" style=" box-shadow: 5px 5px 5px 5px #420869;">
+                
+                <mat-card-content>
+                    <mat-card-title>Incremental Sales by Campaign</mat-card-title>
+                    <div style="display: flex;flex-direction: row;justify-content: space-between;">
+                        <div>
+                            <mat-card-subtitle>Email</mat-card-subtitle>
+                    <mat-progress-bar mode="determinate" value="70" color="primary"></mat-progress-bar>
+                    <mat-card-subtitle>Banner Ads</mat-card-subtitle>
+                    <mat-progress-bar mode="determinate" value="60" color="accent"></mat-progress-bar>
+                    <mat-card-subtitle>Social Ads</mat-card-subtitle>
+                    <mat-progress-bar mode="determinate" value="80" color="warn"></mat-progress-bar>
+                        </div>
+                        <div>
+                            <mat-card-subtitle><button style="margin-top: 20px;" mat-raised-button color="primary" (click)="openProfile()">Visitors Profile</button></mat-card-subtitle>
+                        </div>
+                    </div>
+                    
+                </mat-card-content>
+            </mat-card>
+            
+        </div>
+
+        <!-- ----------------------------- Table ---------------------------- -->
+        <div class="box" >
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="box-shadow: 5px 5px 5px 5px #420869; margin: 15px 0px;">
+        
+                <!--- Note that these columns can be defined in any order.
+                      The actual rendered columns are set as a property on the row definition" -->
+              
+                <!-- Position Column -->
+                <ng-container matColumnDef="imageUrl">
+                  <th mat-header-cell *matHeaderCellDef><img style="border-radius: 3px; height: 25px; width: 25px;" src="https://www.fg-a.com/shopping-cart/shopping-cart-black-6.png" alt=""></th>
+                  <td mat-cell *matCellDef="let element"><img style="border-radius: 30px; height: 30px; width: 30px;" [src]="element.imageUrl" alt="">  </td>
+                </ng-container>
+              
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef><span style="font-weight: 800;">Resent Activity</span></th>
+                    <td mat-cell *matCellDef="let element"><span style="font-weight: 500;">{{element.name}} </span> <br><br><br> 
+                    <span style="color: rgb(126, 126, 126);">{{element.content}}</span></td>
+                </ng-container>
+        
+                <!-- Name Column -->
+                <ng-container matColumnDef="time">
+                    <th mat-header-cell *matHeaderCellDef><button mat-raised-button color="primary"  routerLink="seeall">See All</button></th>
+                    <td mat-cell *matCellDef="let element"><span style="color: rgb(126, 126, 126);">{{element.time}} </span> 
+                    </td>
+                </ng-container>
+              
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>   
+        </div>
+    
+        <!-- --------------------------- Calendar ------------------------------ -->
+    
+        <div class="Calendar" style="width:230px; background-color: white; border-radius: 5px; padding: 5px 5px; margin: 15px 12px;">
+            <mat-calendar></mat-calendar> 
+        </div>
+
+    </mat-card> 
+    
+</div>
+ 
+</div>
+
+
